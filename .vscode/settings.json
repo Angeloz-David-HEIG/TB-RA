@@ -5,4 +5,17 @@
     "latex-workshop.view.pdf.viewer": "browser",
     "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.latex.clean.command": "make clean",
+    "cSpell.words": [
+        "Annalen",
+        "bewegter",
+        "bibtex",
+        "décommenter",
+        "Etran",
+        "geospatial",
+        "mhchem",
+        "pgfplots",
+        "rper",
+        "sérif",
+        "urldate"
+    ],
 }
