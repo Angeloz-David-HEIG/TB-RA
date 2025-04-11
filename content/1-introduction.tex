@@ -1,32 +1,56 @@
 \chapter{Introduction}
 
-L'introduction est une section \emph{obligatoire} dans un rapport technique. Elle contient généralement au moins quatre paragraphes répondant aux questions suivantes: quel est le problème à résoudre ? Pourquoi y a-t-il un problème ? Quelle est la solution envisagée ? Pourquoi est-ce que la solution envisagée est meilleure que l'état de l'art ?
+% L'introduction est une section \emph{obligatoire} dans un rapport technique. Elle contient généralement au moins quatre paragraphes répondant aux questions suivantes: quel est le problème à résoudre ? Pourquoi y a-t-il un problème ? Quelle est la solution envisagée ? Pourquoi est-ce que la solution envisagée est meilleure que l'état de l'art ?
 
-En bref, on vous demande d'introduire votre travail, l'idée de départ et les objectifs attendus. Le lecteur qui découvrirait votre projet au travers de cette introduction devrait ainsi être capable d'en comprendre le cadre, l'idée générale et les aboutissants du projet.
+% En bref, on vous demande d'introduire votre travail, l'idée de départ et les objectifs attendus. Le lecteur qui découvrirait votre projet au travers de cette introduction devrait ainsi être capable d'en comprendre le cadre, l'idée générale et les aboutissants du projet.
 
-\section{Contexte}
+\section{Contexte}\label{Context}
 
 
-Cette section, bien que \emph{non obligatoire}, figure fréquemment en préambule de l'introduction afin de préciser le cadre formel dans lequel le projet s'inscrit. Elle permet de situer le sujet dans un contexte plus large que ne le suggère l'intitulé du projet. Souvent, ce dernier est réalisé dans un environnement industriel, en réponse à une problématique globale. La présentation du contexte contribue ainsi à clarifier les enjeux, les objectifs et les contraintes associés au projet.
-
+% Cette section, bien que \emph{non obligatoire}, figure fréquemment en préambule de l'introduction afin de préciser le cadre formel dans lequel le projet s'inscrit. Elle permet de situer le sujet dans un contexte plus large que ne le suggère l'intitulé du projet. Souvent, ce dernier est réalisé dans un environnement industriel, en réponse à une problématique globale. La présentation du contexte contribue ainsi à clarifier les enjeux, les objectifs et les contraintes associés au projet.
+Un travail de bachelor réalisé en 2024 \cite{dilucaRealiteAugmenteeReconnaissance2024} avait pour objectif d'inciter les jeunes à se rendre plus souvent dans les
+musées en leur offrant une expérience sur smartphone ou tablette, un outil technologique avec lequel ils sont
+familiers. Ce travail a étudié la faisabilité d'un concept permettant de localiser un joueur à l'intérieur d'un
+musée, de l'orienter et de lui proposer des énigmes. Ce concept est basé sur le moteur de jeu Unity exploité
+pour la réalité augmentée, mais aussi à un scan 3D du musée associé au logiciel Vuforia pour localiser et
+orienter le joueur ou la joueuse.
 \section{Problématique}
 
-La problématique constitue le cœur de l'introduction et représente le point de départ de votre réflexion. Elle doit être clairement définie afin de présenter de manière explicite le problème que vous souhaitez résoudre. Une problématique bien formulée permet au lecteur de comprendre les enjeux du projet, le contexte dans lequel il s'inscrit et les raisons pour lesquelles cette question mérite d'être traitée.
+% La problématique constitue le cœur de l'introduction et représente le point de départ de votre réflexion. Elle doit être clairement définie afin de présenter de manière explicite le problème que vous souhaitez résoudre. Une problématique bien formulée permet au lecteur de comprendre les enjeux du projet, le contexte dans lequel il s'inscrit et les raisons pour lesquelles cette question mérite d'être traitée.
 
-Il ne s'agit pas seulement d'exposer un sujet, mais d'identifier une difficulté spécifique, un manque ou un besoin auquel votre projet apporte une réponse. Vous devez également souligner la pertinence de votre démarche : pourquoi ce problème est-il important ? Quelle valeur ajoutée votre travail est-il susceptible d'apporter ? En clarifiant ces points, vous démontrerez la légitimité et l'intérêt de votre projet.
+% Il ne s'agit pas seulement d'exposer un sujet, mais d'identifier une difficulté spécifique, un manque ou un besoin auquel votre projet apporte une réponse. Vous devez également souligner la pertinence de votre démarche : pourquoi ce problème est-il important ? Quelle valeur ajoutée votre travail est-il susceptible d'apporter ? En clarifiant ces points, vous démontrerez la légitimité et l'intérêt de votre projet.
+Le projet de 2024, bien que fonctionnel, présente plusieurs obstacles à la polyvalence de l'application. Vuforia
+travaille avec des scans de pièces qui sont coûteux en temps et en ressources, pour réaliser les scans
+eux-mêmes ainsi que sur les ressources hardware du smartphone, qui ne permettent d'exploiter qu'un seul lieu
+à la fois.
 
 \section{Objectifs}
 
-Cette section a pour but d'énoncer précisément les objectifs que vous vous fixez pour répondre à la problématique identifiée. Il ne s'agit pas simplement de décrire des intentions générales, mais de formuler des objectifs \emph{clairs, précis et mesurables}.
+Les objectifs de la nouvelle application sont multiples, ils ont été définis dans le cahier des charges sous la forme d'un
+scénario/flowchart, disponible en annexe. Les points principaux sont :
+\begin{itemize}[label=\textbullet]
+    \item Les menus, qui inclut la sélection de parcours
+    \item Affichage d'un plan style Google Maps avec affichage de la prochaine étape à atteindre et l'emplacement du joueur ou de la joueuse
+    \item Affichage de l'écran de jeu principal, avec gestion de la position GPS, de l'orientation (boussole) et des objets virtuels
+    \item Interaction avec les objets virtuels (énigmes, questions, etc.)
+\end{itemize}
 
-Chaque objectif doit être en cohérence avec le contexte et les enjeux du projet. Il est également essentiel que ces objectifs soient atteignables dans le cadre du projet et qu'ils puissent être validés à son terme. Une bonne pratique consiste à utiliser des critères SMART (Spécifique, Mesurable, Atteignable, Réaliste, Temporellement défini) pour s'assurer que vos objectifs sont bien définis.
 
-Par exemple, au lieu de formuler un objectif vague comme « améliorer le système », préférez une formulation claire : « Réduire le temps de réponse du système de 20\% d'ici la fin du projet ».
+% Cette section a pour but d'énoncer précisément les objectifs que vous vous fixez pour répondre à la problématique identifiée. Il ne s'agit pas simplement de décrire des intentions générales, mais de formuler des objectifs \emph{clairs, précis et mesurables}.
+
+% Chaque objectif doit être en cohérence avec le contexte et les enjeux du projet. Il est également essentiel que ces objectifs soient atteignables dans le cadre du projet et qu'ils puissent être validés à son terme. Une bonne pratique consiste à utiliser des critères SMART (Spécifique, Mesurable, Atteignable, Réaliste, Temporellement défini) pour s'assurer que vos objectifs sont bien définis.
+
+% Par exemple, au lieu de formuler un objectif vague comme « améliorer le système », préférez une formulation claire : « Réduire le temps de réponse du système de 20\% d'ici la fin du projet ».
 
 \section{Méthodologie}
 
-La section méthodologie décrit la démarche que vous avez adoptée pour atteindre les objectifs fixés et résoudre la problématique. Elle doit expliquer de manière structurée et argumentée les étapes suivies, les choix effectués, ainsi que les outils et méthodes utilisés.
+Afin d'atteindre les objectifs de la section précédente, l'utilisation d'Unity a été conservée, puisque cela avait fonctionné pour le travail de bachelor précédent.
 
-Vous devez justifier chacune de vos décisions : pourquoi avez-vous opté pour une telle approche plutôt qu'une autre ? Quels sont les avantages de cette méthode par rapport aux alternatives disponibles ? Cette section permet également de présenter les critères de sélection des outils, les méthodes d'analyse utilisées, ainsi que le cadre expérimental mis en place.
+De plus, après avoir pris en main le logiciel, l'étudiant à découvert Google Geospatial Creator, qui permet d'accélérer le processus de placement d'objets virtuels
+en extérieur, "sur Terre".
 
-En clarifiant votre démarche méthodologique, vous montrez non seulement la rigueur de votre travail, mais vous facilitez aussi la compréhension et la reproductibilité de vos résultats.
+% La section méthodologie décrit la démarche que vous avez adoptée pour atteindre les objectifs fixés et résoudre la problématique. Elle doit expliquer de manière structurée et argumentée les étapes suivies, les choix effectués, ainsi que les outils et méthodes utilisés.
+
+% Vous devez justifier chacune de vos décisions : pourquoi avez-vous opté pour une telle approche plutôt qu'une autre ? Quels sont les avantages de cette méthode par rapport aux alternatives disponibles ? Cette section permet également de présenter les critères de sélection des outils, les méthodes d'analyse utilisées, ainsi que le cadre expérimental mis en place.
+
+% En clarifiant votre démarche méthodologique, vous montrez non seulement la rigueur de votre travail, mais vous facilitez aussi la compréhension et la reproductibilité de vos résultats.

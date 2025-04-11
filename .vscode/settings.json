@@ -21,12 +21,14 @@
         "heigth",
         "langid",
         "mhchem",
+        "multiplateforme",
         "parcolumns",
         "pgfplots",
         "rper",
         "sérif",
         "siunitx",
         "textbar",
-        "urldate"
+        "urldate",
+        "Vuforia"
     ],
 }
