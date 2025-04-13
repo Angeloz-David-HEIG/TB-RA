@@ -22,16 +22,63 @@ Le deuxième tutoriel est spécifique à la réalité augmentée, \textit{Mobile
     \item Détecter un plan en RA, puis faire apparaître un objet en cliquant sur l'écran du téléphone.
     \item Déployer une application sur smartphone.
 \end{itemize}
-
+\newpage
 \section{Implémentation de l'application}
 \subsection{Déploiement de Geospatial Creator dans Unity}
-
+Pour avoir accès à Geospatial Creator dans Unity, un tutorial est fourni par Google\cite{GetStartedGeospatial}. Les étapes importantes sont :
+\begin{itemize}[label=\textbullet]
+    \item Suivre le lien sur la page qui redirige vers "Getting started with ARCore Extensions for AR Foundation"
+    \item Installer les Package ARCore Extensions (attention à la version d'ARFoundation) et Cesium
+    \item Revenir sur la page principale
+    \item Autoriser les différentes API dans la console Google Cloud et récupérer la clé d'API (cette étape sera mieux décrite dans le rapport final)
+    \item Importer le projet d'exemple de ARCore Extensions du Package Manager d'Unity
+    \item Activer Geospatial et Geospatial Creator dans Edit -> Project Settings -> XR Plug-in Management -> ARCore Extensions et ensuite insérer la clé d'API dans ce menu.
+\end{itemize}
 \subsection{Test de l'application d'exemple de Google}
-Une fois \acrshort{ggc} déployé dans Unity, la scène d'exemple peut être ouverte :
-\fig[H, width=1\textwidth]{Editeur Unity avec}{Screenshots/GGC_1.png}
+Une fois \acrshort{ggc} déployé dans Unity, la scène d'exemple peut être ouverte dans l'éditeur :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{assets/figures/Screenshots/GGC_1.png}
+    \caption{Editeur Unity, example de Geospatial Creator ouvert.}
+    \label{fig:GGC_1}
+\end{figure}
+L'arborescence dans l'onglet Project montre oû est située la scène d'exemple.
 
-\subsection{Ajout d'un objet virtuel proche de l'étudiant}
 
+Il faut ensuite créer un objet \textbf{Geospatial Creator Origin} :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{assets/figures/Screenshots/GGC_2.png}
+    \caption{Editeur Unity, création de l'objet Geospatial Creator Origin.}
+    \label{fig:GGC_2}
+\end{figure}
+
+La dernière étape pour faire fonctionner le projet d'exemple est de faire fonctionner Cesium :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{assets/figures/Screenshots/GGC_5.png}
+    \caption{Editeur Unity, Activation de Cesium et emplacement de l'origine.}
+    \label{fig:GGC_5}
+\end{figure}
+
+Dans la figure ci-dessus, l'utilisateur a déjà cliqué sur le bouton \textbf{Add Cesium Georeference Component} et inséré sa clé d'API dans le champ correspondant.
+
+Le bouton \textbf{Search for Location} ouvre la petite fenêtre sur la capture d'écran qui permet de chercher un lieu dans le monde. En appuyant sur le bouton \textbf{Apply to objects}
+les textures et les volumes sont appliqués et l'origine est changée d'emplacement.
+Ici, la cathédrale de Lausanne a été choisie comme exemple. Dans l'onglet Scene on peut la voir ainsi que ses environs en 3D et avec les bonnes textures.
+
+Note : La HEIG-VD avait été choisie comme exemple. Cependant, il semble que toute la ville d'Yverdon-les-Bains et ses environs ne possèdent pas encore
+de données qui permettent à GGC de les modéliser en 3D. Le site de Cheseaux apparaît donc plat et on pourrait tout de même travailler avec
+en testant plus rigoureusement les placements d'objets.
+
+\subsection{Ajout d'un objet virtuel proche de l'origine}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{assets/figures/Screenshots/GGC_3.png}
+    \caption{Editeur Unity, Ajout d'un objet virtuel avec une anchor.}
+    \label{fig:GGC_3}
+\end{figure}
 \subsection{Interaction avec l'objet}
 Au moment de l'écriture du rapport, l'objet affiché le joueur ou la joueuse ne peut pas encore avoir d'interaction avec les objets affichés.
 \subsection{Choix du parcours}
@@ -39,11 +86,24 @@ Pour avoir un parcours qui se place dans du concret, les transports lausannois
 ont été contactés dans le but de leur proposer une collaboration, l'étudiant ayant pensé à
 utiliser un parcours, qui fait se déplacer l'utilisateur dans toute la ville de Lausanne,
 créé en 2021 pour les 125 ans des tl.\cite{hatetVeriteLionsLausannois2021} Malheureusement, aucune réponse n'a été reçue de leur
-part pour l'instant. Un parcours alternatif est créé par l'étudiant pour palier l'absence de
-cette collaboration.
+part pour l'instant.
+
+Un parcours alternatif est créé par l'étudiant pour palier l'absence de
+cette collaboration. Il consiste en quelques objets virtuels qui sont placés dans un parc proche d'où il habite.
 
 \subsection{Affichage d'une carte style Google Maps}
+Dans le futur, et pour que l'utilisateur puisse se déplacer comme s'il utilisait une application comme
+Google Maps, le but serait d'implémenter une carte en 2D avec l'emplacement du joueur ou de la joueuse ainsi que l'emplacement
+des objets virtuels à atteindre. Encore une fois la cathédrale de Lausanne est prise comme exemple, pour montrer sur une maquette à quoi
+devrait ressembler la vue sur smartphone. Le rond bleu est l'emplacement du joueur et les ronds avec un carré à l'intéieur sont les objets
+virtuels.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{assets/figures/Screenshots/Maps.png}
+    \caption{Maquette de la vue en 2D, avec indicateurs de joueur et d'objets.}
+    \label{fig:Maps}
+\end{figure}
 % Ce chapitre est consacré à la description détaillée de l'implémentation de votre projet. Il a pour objectif d'expliquer, de manière claire et méthodique, comment vous avez concrètement mis en œuvre votre travail. Vous y présenterez, étape par étape, le processus qui a conduit à la réalisation de votre projet, en justifiant les choix techniques et méthodologiques effectués.
 
 % \index{expérience}
