@@ -73,12 +73,26 @@ de données qui permettent à GGC de les modéliser en 3D. Le site de Cheseaux a
 en testant plus rigoureusement les placements d'objets.
 
 \subsection{Ajout d'un objet virtuel proche de l'origine}
+En revenant à l'origine, soit proche d'où habite l'étudiant et comme pour la création de l'objet \textbf{Geospatial Creator Origin}, on crée un \textbf{Geospatial Creator Anchor} auquel on vient ajouter un objet enfant
+qui est un simple cube avec un \textit{material} de couleur rouge et un script  qui permet de faire tourner l'objet sur lui-même (ces deux propriétés sont visibles dans l'onglet Inspector)
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{assets/figures/Screenshots/GGC_3.png}
     \caption{Editeur Unity, Ajout d'un objet virtuel avec une anchor.}
     \label{fig:GGC_3}
 \end{figure}
+Une fois l'application téléchargée sur téléphone. On peut pointer la caméra du smartphone vers le petit bâtiment qu'on reconnaît de Unity et le cube apparaît.
+Un autre point important auquel il faut faire attention sans les anchor qu'on peut générer en cliquant sur l'écran, elles sont au nombre de quatre et son visible sur la route. C'est à partir de cette méthode (le raycasting)
+qu'on va pouvoir interagir avec les objets virtuels.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{assets/figures/Screenshots/geospatial example.jpg.png}
+    \caption{Vue de l'objet virtuel ajouté depuis le smartphone.}
+    \label{fig:GeoSample}
+\end{figure}
+
 \subsection{Interaction avec l'objet}
 Au moment de l'écriture du rapport, l'objet affiché le joueur ou la joueuse ne peut pas encore avoir d'interaction avec les objets affichés.
 \subsection{Choix du parcours}
@@ -89,7 +103,7 @@ créé en 2021 pour les 125 ans des tl.\cite{hatetVeriteLionsLausannois2021} Mal
 part pour l'instant.
 
 Un parcours alternatif est créé par l'étudiant pour palier l'absence de
-cette collaboration. Il consiste en quelques objets virtuels qui sont placés dans un parc proche d'où il habite.
+cette collaboration. Il consiste en quelques objets virtuels qui seront placés dans un parc proche d'où il habite.
 
 \subsection{Affichage d'une carte style Google Maps}
 Dans le futur, et pour que l'utilisateur puisse se déplacer comme s'il utilisait une application comme
