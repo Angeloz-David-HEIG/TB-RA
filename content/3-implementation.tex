@@ -72,8 +72,9 @@ Note : La HEIG-VD avait été choisie comme exemple. Cependant, il semble que to
 de données qui permettent à GGC de les modéliser en 3D. Le site de Cheseaux apparaît donc plat et on pourrait tout de même travailler avec
 en testant plus rigoureusement les placements d'objets.
 
-\subsection{Ajout d'un objet virtuel proche de l'origine}
-En revenant à l'origine, soit proche d'où habite l'étudiant et comme pour la création de l'objet \textbf{Geospatial Creator Origin}, on crée un \textbf{Geospatial Creator Anchor} auquel on vient ajouter un child object
+\subsection{Ajout d'un objet virtuel proche de l'origine}\label{AddObject}
+En revenant à l'origine, soit proche d'où habite l'étudiant et comme pour la création de l'objet
+\textbf{Geospatial Creator Origin}, on crée un \textbf{Geospatial Creator Anchor} auquel on vient ajouter un \acrshort{co}
 qui est un simple cube avec un \textit{material} de couleur rouge et un script  qui permet de faire tourner l'objet sur lui-même (ces deux propriétés sont visibles dans l'onglet Inspector)
 
 \begin{figure}[H]
@@ -82,16 +83,7 @@ qui est un simple cube avec un \textit{material} de couleur rouge et un script  
     \caption{Editeur Unity, Ajout d'un objet virtuel avec une anchor.}
     \label{fig:GGC_3}
 \end{figure}
-Une fois l'application téléchargée sur téléphone. On peut pointer la caméra du smartphone vers le petit bâtiment qu'on reconnaît de Unity et le cube apparaît.
-Un autre point important auquel il faut faire attention sans les anchor qu'on peut générer en cliquant sur l'écran, elles sont au nombre de quatre et son visible sur la route. C'est à partir de cette méthode (le raycasting)
-qu'on va pouvoir interagir avec les objets virtuels.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{assets/figures/Screenshots/geospatial example.jpg}
-    \caption{Vue de l'objet virtuel ajouté depuis le smartphone.}
-    \label{fig:GeoSample}
-\end{figure}
 
 \subsection{Interaction avec l'objet}
 Au moment de l'écriture du rapport, l'objet affiché le joueur ou la joueuse ne peut pas encore avoir d'interaction avec les objets affichés.
@@ -99,10 +91,10 @@ Au moment de l'écriture du rapport, l'objet affiché le joueur ou la joueuse ne
 Pour avoir un parcours qui se place dans du concret, les transports lausannois
 ont été contactés dans le but de leur proposer une collaboration, l'étudiant ayant pensé à
 utiliser un parcours, qui fait se déplacer l'utilisateur dans toute la ville de Lausanne,
-créé en 2021 pour les 125 ans des tl.\cite{hatetVeriteLionsLausannois2021} Malheureusement, aucune réponse n'a été reçue de leur
-part pour l'instant.
+créé en 2021 pour les 125 ans des tl.\cite{hatetVeriteLionsLausannois2021} Une réponse a été reçue le 14 avril, le parcours pourrait donc
+être adapté.
 
-Un parcours alternatif est créé par l'étudiant pour palier l'absence de
+Un parcours alternatif est cependant créé par l'étudiant pour palier l'absence de
 cette collaboration. Il consiste en quelques objets virtuels qui seront placés dans un parc proche d'où il habite.
 
 \subsection{Affichage d'une carte style Google Maps}
@@ -110,7 +102,8 @@ Dans le futur, et pour que l'utilisateur puisse se déplacer comme s'il utilisai
 Google Maps, le but serait d'implémenter une carte en 2D avec l'emplacement du joueur ou de la joueuse ainsi que l'emplacement
 des objets virtuels à atteindre. Encore une fois la cathédrale de Lausanne est prise comme exemple, pour montrer sur une maquette à quoi
 devrait ressembler la vue sur smartphone. Le rond bleu est l'emplacement du joueur et les ronds avec un carré à l'intérieur sont les objets
-virtuels.
+virtuels. Idéalement, les objets aurait un rayon autour de leur position qui  permettrait à l'utilisateur de savoir quand l'objet apparaîtra dans la vue
+caméra (et à l'application de savoir quand les afficher.)
 
 \begin{figure}[H]
     \centering
